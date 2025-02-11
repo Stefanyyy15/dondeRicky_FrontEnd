@@ -14,7 +14,7 @@ https://github.com/Stefanyyy15/dondeRicky_BackEnd.git
 
 ## Índice
 
-| Índice Título
+| Índice | Título |
 | ------ | --------------- |
 | 1. Descripción del proyecto 2. Requisitos del sistema
 | 2. | Requisitos del sistema | 3.
