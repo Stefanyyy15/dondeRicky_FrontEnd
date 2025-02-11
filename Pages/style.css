@@ -66,9 +66,9 @@
 }
 
 #btnLogin {
-    width: 20%;
-    padding: 2%;
-    margin-top: 5%;
+    width: 30%;
+    padding: 3%;
+    margin-top: 8%;
     border-radius: 10px;
     font-family: 'Glass Antiqua';
     border: none;
@@ -80,57 +80,14 @@
 #btnLogin:hover {
     background-color: rgba(255, 255, 255, 0.479);
 }
-.registrar{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-.registrar a{
-    text-decoration: none;
-    color: white;
-}
-
-
-/* ---------------------------------------------------   ESTILOS PARA REGISTRAR ------------------------------------------------- */
-
-.contentRegistrar{
-    border: none;
-    width: 30vw;
-    text-align: center;
-    flex-direction: column;
-    margin-top: 30%;
-    font-family: 'Glass Antiqua';
-    color: white;
-    padding: 10%;
-    background-color: rgba(0, 0, 0, 0.39);
-    border-radius: 15px;
-    font-size: 20px;
-}
-
-#btnRegistrar {
-    width: 20%;
-    padding: 2%;
-    margin-top: 5%;
-    border-radius: 10px;
-    font-family: 'Glass Antiqua';
-    border: none;
-    cursor: pointer;
-    background-color: white;
-    font-size: 17px;
-}
-
-#btnRegistrar:hover {
-    background-color: rgba(255, 255, 255, 0.479);
-}
-
 
 /* ---------------------------------------------------   ESTILOS PARA EL INICIOOO ------------------------------------------------- */
 #bodyInicio {
     background-image: url("/Background/fondoPrincipal.png");
     font-family: 'Glass Antiqua';
-    background-size: cover;
+    background-size: auto;
     display: flex;
+    background-repeat: no-repeat
 }
 
 .barraPrincipal {
@@ -162,6 +119,77 @@
     color: white;
 }
 
+//coregir estilos para hacer mas atractivo visualmente y hacerlo responsive
+.hero{
+    color: white;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    margin-top: 6%;
+    padding: 2%;
+    line-height: 3.5vh;
+}
+
+.destacados{
+    color: white;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    margin-top: 6%;
+    padding: 2%;
+    line-height: 3.5vh;
+}
+
+.nosotros{
+    color: white;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    margin-top: 6%;
+    padding: 2%;
+    line-height: 3.5vh;
+}
+
+.plato{
+}
+
+.footer-content{
+    color: white;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    margin-top: 6%;
+    padding: 2%;
+    line-height: 3.5vh;
+}
 
 /* ---------------------------------------------------   ESTILOS PARA EL MENU ------------------------------------------------- */
 #bodyMenu {
@@ -195,7 +223,7 @@
 
 .box a:hover {
     transform: scale(1.1);
-}
+} 
 
 .box img {
     width: 15vw;
@@ -293,6 +321,7 @@
 }
 /* ---------------------------------------------------  DISEÑO RESPONSIVE ------------------------------------------------- */
 
+/* Diseño Responsive */
 @media (max-width: 1300px) {
     .box {
         grid-template-columns: repeat(3, minmax(100px, 1fr));
@@ -361,3 +390,4 @@
 display:none
 }
 }
+
