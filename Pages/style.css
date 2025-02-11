@@ -1,13 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
 
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2e2b29;
+}
 
 /* ---------------------------------------------------   ESTILOS PARA EL LOGIN ------------------------------------------------- */
 
-#bodyLogin{
+#bodyLogin {
     background: url("/Background/fondoLogin.png");
     background-size: cover;
     margin: auto;
@@ -16,7 +33,8 @@
     width: 100%;
     height: 100vh;
 }
-.contentLogin{
+
+.contentLogin {
     border: none;
     width: 30vw;
     text-align: center;
@@ -29,13 +47,15 @@
     border-radius: 15px;
     font-size: 20px;
 }
-.formLogin{
+
+.formLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-.formLogin input{
+
+.formLogin input {
     width: 90%;
     text-align: center;
     height: 5vh;
@@ -44,7 +64,8 @@
     font-size: 17px;
     border: none;
 }
-#btnLogin{
+
+#btnLogin {
     width: 30%;
     padding: 3%;
     margin-top: 8%;
@@ -55,54 +76,190 @@
     background-color: white;
     font-size: 17px;
 }
-#btnLogin:hover{
+
+#btnLogin:hover {
     background-color: rgba(255, 255, 255, 0.479);
 }
 
 /* ---------------------------------------------------   ESTILOS PARA EL INICIOOO ------------------------------------------------- */
-#bodyInicio{
+#bodyInicio {
     background-image: url("/Background/fondoPrincipal.png");
     font-family: 'Glass Antiqua';
     background-size: cover;
-
+    display: flex;
 }
-.barraPrincipal{
+
+.barraPrincipal {
     width: 100%;
+    height: 8vh;
     position: fixed;
     display: flex;
     justify-content: space-between;
-    color: #2e2b29;
+    background-color: #2e2b29;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.041);
+    z-index: 999;
 }
-.imgLogo{
+
+.imgLogo {
     width: 20%;
     justify-content: center;
     display: flex;
 }
-.paginasIconos{
+
+.paginasIconos {
     display: flex;
     justify-content: space-around;
     width: 50%;
     align-items: center;
 }
-.paginasIconos a{
+
+.paginasIconos a {
     text-decoration: none;
     color: white;
 }
 
 
+/* ---------------------------------------------------   ESTILOS PARA EL MENU ------------------------------------------------- */
+#bodyMenu {
+    background-color: #2e2b29;
+    display: flex;
+    font-family: 'Glass Antiqua';
+}
+
+.menuContent {
+    padding: 20px;
+    width: 90%;
+
+}
+.mainMenu{
+    margin-top: 6%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+}
+
+.box a {
+    transition: transform .3s;
+}
+
+.box a:hover {
+    transform: scale(1.1);
+}
+
+.box img {
+    width: 15vw;
+    height: 20vh;
+    border-radius: 10px;
+}
+
+.itemMenu{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 15px;
+    gap: 15px;
+}
+.add{
+    font-family: 'Glass Antiqua';
+    padding: 2%;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.add:hover{
+    background-color: rgba(255, 255, 255, 0.644);
+}
+/* .botonPedir{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 20%;
+}
+.botonPedir input{
+    width: 80%;
+    border: none;
+    background-color: white;
+    font-family: 'Glass Antiqua';
+    text-align: center;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+.botonPedir button{
+    padding: 5%;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    font-size: 10px;
+    cursor: pointer;
+}
+.botonPedir button:hover{
+    background-color: #bdecb6;
+}
+#btn-minus:hover{
+    background-color: #ff6961;
+} */
+
+
+/* ---------------------------------------------------  ESTILOS PARA QUIENES SOMOS ------------------------------------------------- */
+
+#bodyQuienes{
+    background-image: url("/Background/fondoPrincipal.png");
+    font-family: 'Glass Antiqua';
+    background-size: cover;
+    display: flex;
+}
+
+.contentQuienes{
+    color: white;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 20px;
+    margin-top: 3%;
+    padding: 2%;
+    margin-left: 25%;
+    line-height: 4vh;
+}
+.mainQuien{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 /* ---------------------------------------------------  DISEÑO RESPONSIVE ------------------------------------------------- */
 
 @media (max-width:1300px) {
-    .contentLogin{
-    width: 50vw;
-    margin-top: 200px;
-}
+    .contentLogin {
+        width: 50vw;
+        margin-top: 200px;
+    }
 }
 
 @media (max-width:800px) {
-    .contentLogin{
-    width: 80vw;
-    margin-top: 200px;
-}
+    .contentLogin {
+        width: 80vw;
+        margin-top: 200px;
+    }
 }
