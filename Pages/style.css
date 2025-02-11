@@ -81,6 +81,39 @@
     background-color: rgba(255, 255, 255, 0.479);
 }
 
+/* ---------------------------------------------------   ESTILOS PARA REGISTRAR ------------------------------------------------- */
+
+.contentRegistrar{
+    border: none;
+    width: 30vw;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 30%;
+    font-family: 'Glass Antiqua';
+    color: white;
+    padding: 10%;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+#btnRegistrar {
+    width: 20%;
+    padding: 2%;
+    margin-top: 5%;
+    border-radius: 10px;
+    font-family: 'Glass Antiqua';
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    font-size: 17px;
+}
+
+#btnRegistrar:hover {
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+
 /* ---------------------------------------------------   ESTILOS PARA EL INICIOOO ------------------------------------------------- */
 #bodyInicio {
     background-image: url("/Background/fondoPrincipal.png");
@@ -119,7 +152,6 @@
     color: white;
 }
 
-//coregir estilos para hacer mas atractivo visualmente y hacerlo responsive
 .hero{
     color: white;
     width: 50%;
