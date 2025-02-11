@@ -219,7 +219,7 @@
 /* ---------------------------------------------------  ESTILOS PARA QUIENES SOMOS ------------------------------------------------- */
 
 #bodyQuienes{
-    background-image: url("/Background/fondoPrincipal.png");
+    background-image: url("/Background/fondoQuienes.png");
     font-family: 'Glass Antiqua';
     background-size: cover;
     display: flex;
@@ -237,10 +237,9 @@
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0.39);
     border-radius: 20px;
-    margin-top: 3%;
+    margin-top: 6%;
     padding: 2%;
-    margin-left: 25%;
-    line-height: 4vh;
+    line-height: 3.5vh;
 }
 .mainQuien{
     margin-top: 5%;
