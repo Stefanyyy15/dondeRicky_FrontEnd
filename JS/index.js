@@ -1,104 +1,61 @@
+document.addEventListener("DOMContentLoaded", function () {
+    localStorage.clear();
+    const loginButton = document.getElementById("btnLogin");
 
-const urlUser = "";
+    loginButton.addEventListener("click", async function (event) {
+        event.preventDefault(); 
 
-const peticionGet = async (url) => {
-    try {
-        const respuesta = await fetch(url, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': ''
-            }
-        });
-        console.log('Response status: ', respuesta.status);
-        if (respuesta.ok) {
-            const info = await respuesta.json();
-            console.log(info);
-            return info;
-        } else {
-            console.log('Error ', respuesta.status);
-            return null;
-        }
-    } catch (error) {
-        console.error('Error ', error);
-        return null;
-    }
-}
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-async function peticionPost(url, data) {
-    try {
-        const token = localStorage.getItem('token');
-
-        if (!token) {
-            alert("There is no valid token. Please log in.");
+        if (!email || !password) {
+            alert("Por favor ingresa todos los datos");
             return;
         }
-        const respuesta = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': token
-            },
-            body: JSON.stringify(data)
-        });
 
-        console.log('Response Status', respuesta.status);
-        if (respuesta.ok) {
-            const postCreado = await respuesta.json();
-            return postCreado;
-        } else {
-            console.error('Error', respuesta.status);
-            const textoError = await respuesta.text();
-            console.error('Error detail:', textoError);
-            return null;
+        const requestData = {
+            email: email,
+            password: password
+        };
+
+        try {
+            const response = await fetch("http://localhost:8081/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(requestData)
+            });
+
+            if (!response.ok) {
+                throw new Error("Credenciales invalidas");
+            }
+
+            const data = await response.json(); 
+
+            localStorage.setItem("email", email);
+            localStorage.setItem("token", data.token);
+
+            const userResponse = await fetch(`http://localhost:8081/api/user/email/${email}`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${data.token}`,
+                    "Content-Type": "application/json"
+                }
+            });
+
+            if (!userResponse.ok) {
+                throw new Error("Error al obtener el ID del usuario.");
+            }
+
+            const userData = await userResponse.json();
+            localStorage.setItem("userId", userData.id); 
+            alert("Inicio de sesion exitoso");
+            window.location.href = "Pages/inicio.html";
+
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Error al iniciar sesion");
         }
-    } catch (error) {
-        console.error("Error POST", error);
-        return null;
-    }
-}
-
-
-
-/* async function agregarPost(url) {
-    const content = document.getElementById("content").value.trim();
-    const image = document.getElementById("image").value.trim() || null;
-    const user = JSON.parse(localStorage.getItem('user'));
-
-    if (content.length === 0) {
-        alert("The content of the post is mandatory.");
-        return;
-    }
-
-    if (content.length < 5 || content.length > 500) {
-        alert("The content of the post must be between 5 and 500 characters.");
-        return;
-    }
-
-    const nuevoPost = {
-        content,
-        image,
-        user: { id_user: user.id_user },
-        publicationDate: new Date().toISOString()
-    };
-
-    try {
-        const postCreado = await peticionPost(url, nuevoPost);
-
-        if (postCreado) {
-            console.log("Post created successfully:", postCreado);
-            alert("Post created successfully");
-            window.location.href = "/Pages/inicio.html";
-        } else {
-            alert("Error creating post");
-        }
-    } catch (error) {
-        console.error("Request failed:", error);
-        alert("An error occurred while trying to create the post.");
-    }
-}
- */
-
-
-document.getElementById("btn-create-post").addEventListener("click", () => {
-    agregarPost(urlPost);
+    });
 });

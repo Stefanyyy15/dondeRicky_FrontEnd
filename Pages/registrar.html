@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donde Ricky</title>
-    <link rel="stylesheet" href="Pages/style.css">
-    <script src="JS/index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="/JS/registrar.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Glass+Antiqua&display=swap" rel="stylesheet">
@@ -16,16 +16,18 @@
 </head>
 <body id="bodyLogin">
     <main>
-        <div class="contentLogin">
+        <div class="contentRegistrar">
             <form class="formLogin">
+                <label >Ingresa tu nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre">
                 <label >Ingresa tu correo electrónico:</label>
                 <input type="email" id="email" placeholder="Email">
                 <label >Ingresa tu Contraseña:</label>
                 <input type="password" id="password" placeholder="Contraseña">
             </form>
             <div class="registrar">
-                <button type="button" id="btnLogin" >Iniciar Sesion</button>
-                <a href="Pages/registrar.html">Registrar usuario</a>
+                <button type="button" id="btnRegistrar" >Registrarse</button>
+                <a href="../index.html">Iniciar sesion</a>
             </div>
         </div>
     </main>
