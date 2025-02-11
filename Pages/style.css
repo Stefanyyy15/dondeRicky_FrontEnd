@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 *,
 *::after,
 *::before {
@@ -69,21 +70,33 @@
     width: 30%;
     padding: 3%;
     margin-top: 8%;
+    width: 20%;
+    padding: 2%;
+    margin-top: 5%;
     border-radius: 10px;
     font-family: 'Glass Antiqua';
     border: none;
-    cursor: pointer;
-    background-color: white;
-    font-size: 17px;
 }
 
 #btnLogin:hover {
     background-color: rgba(255, 255, 255, 0.479);
 }
 
+.registrar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registrar a {
+    text-decoration: none;
+    color: white;
+}
+
 /* ---------------------------------------------------   ESTILOS PARA REGISTRAR ------------------------------------------------- */
 
-.contentRegistrar{
+.contentRegistrar {
     border: none;
     width: 30vw;
     text-align: center;
@@ -152,7 +165,7 @@
     color: white;
 }
 
-.hero{
+.hero {
     color: white;
     width: 50%;
     text-align: center;
@@ -169,7 +182,7 @@
     line-height: 3.5vh;
 }
 
-.destacados{
+.destacados {
     color: white;
     width: 50%;
     text-align: center;
@@ -186,7 +199,7 @@
     line-height: 3.5vh;
 }
 
-.nosotros{
+.nosotros {
     color: white;
     width: 50%;
     text-align: center;
@@ -203,10 +216,9 @@
     line-height: 3.5vh;
 }
 
-.plato{
-}
+.plato {}
 
-.footer-content{
+.footer-content {
     color: white;
     width: 50%;
     text-align: center;
@@ -235,7 +247,8 @@
     width: 90%;
 
 }
-.mainMenu{
+
+.mainMenu {
     margin-top: 6%;
     width: 100%;
     display: flex;
@@ -243,6 +256,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .box {
     display: grid;
     grid-gap: 50px;
@@ -255,7 +269,7 @@
 
 .box a:hover {
     transform: scale(1.1);
-} 
+}
 
 .box img {
     width: 15vw;
@@ -263,7 +277,7 @@
     border-radius: 10px;
 }
 
-.itemMenu{
+.itemMenu {
     width: 20vw;
     display: flex;
     flex-direction: column;
@@ -275,7 +289,8 @@
     border-radius: 15px;
     gap: 15px;
 }
-.add{
+
+.add {
     font-family: 'Glass Antiqua';
     padding: 2%;
     border-radius: 20px;
@@ -283,9 +298,11 @@
     background-color: white;
     cursor: pointer;
 }
-.add:hover{
+
+.add:hover {
     background-color: rgba(255, 255, 255, 0.644);
 }
+
 /* .botonPedir{
     display: flex;
     gap: 10px;
@@ -322,14 +339,14 @@
 
 /* ---------------------------------------------------  ESTILOS PARA QUIENES SOMOS ------------------------------------------------- */
 
-#bodyQuienes{
+#bodyQuienes {
     background-image: url("/Background/fondoQuienes.png");
     font-family: 'Glass Antiqua';
     background-size: cover;
     display: flex;
 }
 
-.contentQuienes{
+.contentQuienes {
     color: white;
     width: 50%;
     text-align: center;
@@ -345,12 +362,14 @@
     padding: 2%;
     line-height: 3.5vh;
 }
-.mainQuien{
+
+.mainQuien {
     margin-top: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 /* ---------------------------------------------------  DISEÑO RESPONSIVE ------------------------------------------------- */
 
 /* Diseño Responsive */
@@ -358,9 +377,11 @@
     .box {
         grid-template-columns: repeat(3, minmax(100px, 1fr));
     }
+
     .box img {
         width: 20vw;
     }
+
     .itemMenu {
         width: 25vw;
     }
@@ -370,12 +391,15 @@
     .box {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
     }
+
     .box img {
         width: 30vw;
     }
+
     .itemMenu {
         width: 35vw;
     }
+
     .paginasIconos {
         width: 70%;
     }
@@ -386,18 +410,23 @@
         grid-template-columns: 1fr;
         grid-gap: 30px;
     }
+
     .box img {
         width: 50vw;
     }
+
     .itemMenu {
         width: 70vw;
     }
+
     .paginasIconos {
         width: 90%;
     }
+
     .imgLogo {
         width: 30%;
     }
+
     .contentQuienes {
         width: 80%;
         font-size: 20px;
@@ -408,18 +437,21 @@
     .box img {
         width: 70vw;
     }
+
     .itemMenu {
         width: 90vw;
     }
+
     .imgLogo {
         width: 40%;
     }
+
     .contentQuienes {
         width: 95%;
         font-size: 18px;
     }
-    .paginasIconos{
-display:none
-}
-}
 
+    .paginasIconos {
+        display: none
+    }
+}
