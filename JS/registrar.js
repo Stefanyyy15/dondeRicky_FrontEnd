@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         try {
-            const response = await fetch("http://localhost:8081/signin", {
+            const response = await fetch("http://localhost:3032/signin", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("email", email);
             localStorage.setItem("token", data.token);
 
-            const userResponse = await fetch(`http://localhost:8081/api/user/email/${email}`, {
+            const userResponse = await fetch(`http://localhost:3032/api/user/email/${email}`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${data.token}`,

@@ -99,6 +99,9 @@ Los siguientes requisitos describen lo que la aplicación debe permitir hacer a 
 
 ## Paginas
 
+![alt text](Background/1.png)
+![alt text](Background/2.png)
+![alt text](Background/3.png)
 
 ## Preguntas frecuentes
 Lista de preguntas más frecuentes:
