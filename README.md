@@ -5,7 +5,7 @@ Donde Ricky es un sistema de gestión de pedidos mediante una aplicación web qu
 ## Link Backend
 https://github.com/Stefanyyy15/Bohemia_BackEnd.git
 
-![Imagen logo](background/imagenCarga.png)
+![ImagenLogo](<Background/DONDE RICKY.png>)
 
 ## Tabla de contenido
 
@@ -92,7 +92,7 @@ Los siguientes requisitos describen lo que la aplicación debe permitir hacer a 
 
 ## Diagrama ER
 
-![alt text](background/DiagramER.png)
+![Diagra,a ER](Background/DiagramaER.png)
 
 ## Paginas
 
