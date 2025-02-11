@@ -3,7 +3,10 @@
 Donde Ricky es un sistema de gestión de pedidos mediante una aplicación web que permite a los clientes realizar pedidos en línea y a los administradores gestionar el menú y los pedidos en tiempo real. Es una aplicación funcional y segura que incluye un frontend amigable construido con HTML, CSS y JavaScript. Interactúa con una API RESTful y un backend robusto desarrollado en Spring Boot para proporcionar una experiencia de usuario fluida y atractiva con autenticación y persistencia de datos. Donde Ricky anima a los usuarios a explorar un amplio menu lleno de sabores que sorprenderan su paladar.
 
 ## Link Backend
-https://github.com/Stefanyyy15/Bohemia_BackEnd.git
+https://github.com/Stefanyyy15/dondeRicky_BackEnd.git
+
+## Link Swagger
+
 
 ![ImagenLogo](<Background/DONDE RICKY.png>)
 
